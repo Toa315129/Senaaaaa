@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>senaphotobooth</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+  <h1>senaphotobooth</h1>
+  <p>Loading Camera...</p>
+</div>
+
+<!-- MAIN -->
+<div id="app" class="hidden">
+
+  <!-- HEADER -->
+  <header>
+    <h1>senaphotobooth</h1>
+  </header>
+
+  <!-- CAMERA -->
+  <div class="camera-wrapper">
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" class="hidden"></canvas>
+
+    <!-- COUNTDOWN -->
+    <div id="countdown" class="hidden"></div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button id="start">START</button>
+    <button id="retake" class="hidden">RETAKE</button>
+    <button id="download" class="hidden">DOWNLOAD</button>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="hidden">
+    <canvas id="strip"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
