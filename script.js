@@ -16,14 +16,27 @@ let photos = [];
 const TOTAL = 4;
 
 /* CAMERA */
-navigator.mediaDevices.getUserMedia({ video: true })
-.then(stream => {
-  video.srcObject = stream;
-  loading.classList.add("hidden");
-  app.classList.remove("hidden");
-})
-.catch(() => {
-  alert("ไม่สามารถเปิดกล้องได้");
+const video = document.getElementById("video");
+const loading = document.getElementById("loading");
+const app = document.getElementById("app");
+const openBtn = document.getElementById("openCamera");
+
+openBtn.addEventListener("click", async () => {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "user" },
+      audio: false
+    });
+
+    video.srcObject = stream;
+    await video.play();
+
+    loading.classList.add("hidden");
+    app.classList.remove("hidden");
+
+  } catch (err) {
+    alert("ไม่สามารถเปิดกล้องได้: " + err.message);
+  }
 });
 
 /* COUNTDOWN */
