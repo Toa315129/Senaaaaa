@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+}
+
+/* LOADING */
+#loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 10;
+}
+
+/* APP */
+.hidden {
+  display: none;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+/* CAMERA */
+.camera-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  background: #111;
+}
+
+/* COUNTDOWN */
+#countdown {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 120px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5);
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#start {
+  background: #fff;
+  color: #000;
+}
+
+#retake {
+  background: #ff7675;
+  color: #fff;
+}
+
+#download {
+  background: #00cec9;
+  color: #000;
+}
+
+/* RESULT STRIP */
+#result {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#strip {
+  background: #fff;
+  padding: 10px;
+}
